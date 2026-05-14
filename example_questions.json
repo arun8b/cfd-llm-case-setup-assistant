@@ -1,0 +1,37 @@
+# Model Card / System Card
+
+## Project Name
+
+CFD-LLM Case Setup Assistant
+
+## Intended Use
+
+A technical assistant for early-stage CFD case setup, troubleshooting and documentation planning.
+
+## Intended Users
+
+- aerospace engineering students
+- CFD beginners/intermediate users
+- simulation portfolio developers
+- engineers preparing verification reports
+
+## Strengths
+
+- practical CFD workflow reasoning
+- convergence and mesh sensitivity guidance
+- structured answer format
+- lightweight local execution
+- extensible RAG architecture
+
+## Limitations
+
+- not a replacement for solver documentation
+- not a validated expert system
+- no automatic mesh inspection
+- no direct CFD solver execution
+- current retrieval is keyword-based
+- answers depend on the curated knowledge base
+
+## Safety Notes
+
+The assistant should not be used to make certification, flight safety or production design decisions without expert review and validated simulation evidence.

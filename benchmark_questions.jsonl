@@ -1,0 +1,17 @@
+from pathlib import Path
+
+from app.core.retrieval import load_knowledge_base, retrieve
+
+
+def test_retrieval_returns_airfoil_boundary_condition_context():
+    kb = load_knowledge_base(Path("app/data/cfd_knowledge_base.jsonl"))
+    results = retrieve("airfoil boundary conditions farfield", kb, top_k=3)
+    assert results
+    assert any("boundary" in r.item.topic.lower() for r in results)
+
+
+def test_retrieval_returns_convergence_context():
+    kb = load_knowledge_base(Path("app/data/cfd_knowledge_base.jsonl"))
+    results = retrieve("residuals converge but lift drag changing", kb, top_k=3)
+    assert results
+    assert any("convergence" in r.item.topic.lower() for r in results)

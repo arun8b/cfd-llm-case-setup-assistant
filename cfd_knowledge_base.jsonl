@@ -1,0 +1,46 @@
+# Methodology
+
+## System Design
+
+This project uses a simple RAG-style structure:
+
+1. User asks a CFD question.
+2. The system searches a curated CFD knowledge base.
+3. The most relevant knowledge items are retrieved.
+4. The assistant builds a technically cautious answer.
+5. The answer includes suggested verification and troubleshooting checks.
+
+## Current Retrieval Method
+
+The current implementation uses keyword overlap and tag boosting. This is intentionally simple so the repository can run without external services.
+
+## Future Retrieval Upgrade
+
+Possible future upgrades:
+
+- sentence-transformer embeddings
+- FAISS or Chroma vector database
+- document chunking from OpenFOAM/SU2 notes
+- hybrid retrieval with keyword and vector search
+- reranking
+- source citation display
+
+## Domain Scope
+
+Current scope:
+
+- airfoil CFD
+- OpenFOAM-style case setup
+- SU2-style polar studies
+- mesh sensitivity
+- residual and force convergence
+- turbulence-model reasoning
+- intake/diffuser pressure recovery
+- CFD verification documentation
+
+## Out of Scope
+
+- generating validated CFD results without simulation
+- replacing expert review
+- giving safety-critical certification conclusions
+- claiming solver-specific performance without data
